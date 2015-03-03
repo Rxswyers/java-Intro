@@ -12,6 +12,8 @@ public class Word
 {
 	//members
 	ArrayList<Letter> word;
+	boolean guessed;
+	boolean used;
 	
 	public Word(String s)
 	{
@@ -20,6 +22,11 @@ public class Word
 		{
 			word.add(new Letter(s.charAt(i)));
 		}
+	}
+	//generates the blanks randomly
+	public void genBlanks()
+	{
+		System.out.println("Do something");
 	}
 	public String toString()
 	{

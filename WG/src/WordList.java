@@ -18,6 +18,7 @@ public class WordList
 	//members
 	ArrayList<Word> words;
 	
+	
 	public WordList ()
 	{
 		this.words = new ArrayList<Word>();

@@ -12,6 +12,7 @@ public class Player
 {
 	//members
 	String name;
+	int score;
 	
 	//constructor
 	public Player (String n)
