@@ -1,4 +1,14 @@
-
+/*Author: 			Ruben Swyers
+* Creation Date: 	February 27, 2015 
+* Due Date: 		 
+* Course: 			CSC243
+* Professor Name: 	Dr. Kaplan
+* Assignment: 		#1
+* Filename: 		Letter.java
+* Purpose:		  	Class, Makes up the object that the project will essentially be based
+* off of. The Letter class is basically a character, but with a few members and methods to help
+* make the game logic easier
+*/
 public class Letter
 {
 	//members

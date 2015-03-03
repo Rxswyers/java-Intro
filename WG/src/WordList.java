@@ -1,3 +1,12 @@
+/*Author: 			Ruben Swyers
+* Creation Date: 	February 27, 2015 
+* Due Date: 		 
+* Course: 			CSC243
+* Professor Name: 	Dr. Kaplan
+* Assignment: 		#1
+* Filename: 		WordList.java
+* Purpose:		  	Class, Hold words to be used for the game
+*/
 import java.util.ArrayList;
 import java.io.File;
 import java.io.BufferedReader;
@@ -14,6 +23,7 @@ public class WordList
 		this.words = new ArrayList<Word>();
 	}
 	//load the list from a file "words.txt"
+	//if it doesn't work for some reason there will be an IOException
 	public void loadWords() throws IOException
 	{
 		File dir = new File(".");

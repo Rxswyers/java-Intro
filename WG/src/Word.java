@@ -1,3 +1,12 @@
+/*Author: 			Ruben Swyers
+* Creation Date: 	February 27, 2015 
+* Due Date: 		 
+* Course: 			CSC243
+* Professor Name: 	Dr. Kaplan
+* Assignment: 		#1
+* Filename: 		Word.java
+* Purpose:		  	Class, This will be a collection of Letters, creating a word.
+*/
 import java.util.ArrayList;
 public class Word
 {
