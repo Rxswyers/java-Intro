@@ -44,8 +44,9 @@ public class WordList
 		}
 		//close out the file
 		buff.close();
-		
 	}
+	//loads the wordlist from words.txt, if it's not there it will fill the list
+	//with a default list of words
 	public void loadWords()
 	{
 		try
@@ -76,6 +77,12 @@ public class WordList
 	//returns an unused word from the list
 	public Word getWord()
 	{
+		//get a random number that is between size of the list and 0
+		//check that index and see if the word is used, if it is, get another random num
+		/*for(Word w:words)
+		{
+			
+		}*/
 		return new Word("Return");
 	}
 	public String toString()
