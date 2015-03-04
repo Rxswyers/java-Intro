@@ -18,5 +18,6 @@ public class Player
 	public Player (String n)
 	{
 		this.name = n;
+		this.score = 0;
 	}
 }
