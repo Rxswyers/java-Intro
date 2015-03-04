@@ -38,7 +38,6 @@ public class WordList
 		
 		while((line = buff.readLine()) != null)
 		{
-			System.out.println(line);
 			//adds the word to the file
 			//the file should have a word on each line
 			this.words.add(new Word(line));
