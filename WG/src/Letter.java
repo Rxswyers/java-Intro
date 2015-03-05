@@ -29,9 +29,28 @@ public class Letter
 	}
 	//called to guess a letter, will make the guessed value true, so that
 	//I can tell it is guessed
-	public void guess()
+	public void guess(char l)
 	{
-		this.guessed = true;
+		if(l == this.letter)
+		{
+			this.guessed = true;
+			System.out.println("Guessed one right!");
+		}
+	}
+	public boolean is(char c)
+	{
+		if(this.letter == c)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public boolean isBlank()
+	{
+		return this.blank;
 	}
 	public void makeBlank()
 	{

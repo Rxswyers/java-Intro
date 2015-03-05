@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 public class WordList
 {
 	//members
@@ -77,13 +78,51 @@ public class WordList
 	//returns an unused word from the list
 	public Word getWord()
 	{
-		//get a random number that is between size of the list and 0
+		RandomInteger rand = new RandomInteger(0,this.words.size()-1);
+		int randomNum = 0;
+		int count = 0;
+		//get a random number that is between size of the list - 1 and 0
 		//check that index and see if the word is used, if it is, get another random num
-		/*for(Word w:words)
+		while(count < this.words.size())
+		{
+			randomNum = rand.nextRandomIntegerInRange();
+			if(this.words.get(randomNum).isUsed())
+			{
+				count ++;
+				continue;
+			}
+			else
+			{
+				this.words.get(randomNum).use();
+				return this.words.get(randomNum);
+				
+			}
+		}
+		return new Word("Return");
+	}
+	//Asks the player if they want to reuse the list once every word is used once
+	/*public void listExhausted()
+	{
+		char userIn;
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("You have used every word in the list once already, would you like to keep playing? (Y/y for yes, N/n for no)");
+		
+		userIn = keyboard.next().charAt(0);
+		if(userIn == 'Y' || userIn =='y')
+		{
+			this.resetWordsUsed();
+		}
+		else if(userIn == 'N' || userIn == 'n')
 		{
 			
-		}*/
-		return new Word("Return");
+		}
+	}*/
+	public void resetWordsUsed()
+	{
+		for(Word w: this.words)
+		{
+			w.resetUsed();
+		}
 	}
 	public String toString()
 	{
