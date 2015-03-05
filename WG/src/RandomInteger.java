@@ -1,6 +1,6 @@
 /*Author: 			Ruben Swyers (Orignal Author: Dr.Kaplan)
 * Creation Date: 	February 27, 2015 
-* Due Date: 		 
+* Due Date: 		March 5, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
 * Assignment: 		#1
@@ -17,7 +17,11 @@ public class RandomInteger
 	int randomInteger; // Generated random integer in the specified range
 	
 	private Random rm;
-	
+	//Name:			RandomInteger
+	//Description:	Constructor for RandomInteger
+	//Parameters:	int low - low range
+	//				int high - high range
+	//Returns:		none
 	public RandomInteger(int low, int high)
 	{
 		super();
@@ -27,7 +31,10 @@ public class RandomInteger
 		
 		rm = new Random();
 	}
-	
+	//Name:			nextRandomIntegerInRange
+	//Description:	Gets a random integer that is in the appropriate range
+	//Parameters:	none
+	//Returns:		int - integer that is randomly generated
 	public int nextRandomIntegerInRange()
 	{
 		int randomInteger = 0;

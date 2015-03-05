@@ -1,6 +1,6 @@
 /*Author: 			Ruben Swyers
 * Creation Date: 	February 27, 2015 
-* Due Date: 		 
+* Due Date: 		March 5, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
 * Assignment: 		#1
@@ -11,13 +11,38 @@
 public class Player
 {
 	//members
-	String name;
 	int score;
 	
-	//constructor
-	public Player (String n)
+	//Name:			Player
+	//Description:	Constructor for a Player - sets their score to 0
+	//Parameters:	none
+	//Returns:		none
+	public Player ()
 	{
-		this.name = n;
 		this.score = 0;
+	}
+	//Name:			addScore
+	//Description:	adds a value to the score
+	//Parameters:	int - value to be added
+	//Returns:		none
+	public void addScore(int n)
+	{
+		this.score += n;
+	}
+	//Name:			subtractScore
+	//Description:	subtracts a value from the score
+	//Parameters:	int - value to be subtracted
+	//Returns:		none
+	public void subtractScore(int n)
+	{
+		this.score -= n;
+	}
+	//Name:			getScore
+	//Description:	gets the score of the player
+	//Parameters:	none
+	//Returns:		int - the score of the player
+	public int getScore()
+	{
+		return this.score;
 	}
 }

@@ -1,6 +1,6 @@
 /*Author: 			Ruben Swyers
 * Creation Date: 	February 27, 2015 
-* Due Date: 		 
+* Due Date: 		March 5, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
 * Assignment: 		#1
@@ -13,19 +13,24 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 public class WordList
 {
 	//members
 	ArrayList<Word> words;
 	
-	
+	//Name:			WordList
+	//Description:	Constructor for a WordList
+	//Parameters:	none
+	//Returns:		none
 	public WordList ()
 	{
 		this.words = new ArrayList<Word>();
 	}
-	//load the list from a file "words.txt"
-	//if it doesn't work for some reason there will be an IOException
+	//Name:			loadFromFile
+	//Description:	loads the list from a file "words.txt", if it doesn't work for some reason
+	//				an IOException will be thrown
+	//Parameters:	none
+	//Returns:		none
 	public void loadFromFile() throws IOException
 	{
 		File dir = new File(".");
@@ -46,8 +51,11 @@ public class WordList
 		//close out the file
 		buff.close();
 	}
-	//loads the wordlist from words.txt, if it's not there it will fill the list
-	//with a default list of words
+	//Name:			loadWords
+	//Description:	calls loadFromFile, if it fails it will load the list with a default set
+	//				of words
+	//Parameters:	none
+	//Returns:		none
 	public void loadWords()
 	{
 		try
@@ -65,8 +73,10 @@ public class WordList
 			this.setDefaultWords(defWords);
 		}
 	}
-	//takes in an array of strings that will be added to the word list
-	//this will be used if reading from a file fails
+	//Name:			setDefaultWords
+	//Description:	takes in an array of strings that will be added to the word list
+	//Parameters:	String array - Strings to be put into the list
+	//Returns:		none
 	public void setDefaultWords(String [] ws)
 	{
 		for(String w:ws)
@@ -75,7 +85,10 @@ public class WordList
 		}
 		
 	}
-	//returns an unused word from the list
+	//Name:			getWord
+	//Description:	gets an unused word from the list
+	//Parameters:	none
+	//Returns:		Word - an unused word
 	public Word getWord()
 	{
 		RandomInteger rand = new RandomInteger(0,this.words.size()-1);
@@ -100,23 +113,10 @@ public class WordList
 		}
 		return new Word("Return");
 	}
-	//Asks the player if they want to reuse the list once every word is used once
-	/*public void listExhausted()
-	{
-		char userIn;
-		Scanner keyboard = new Scanner(System.in);
-		System.out.println("You have used every word in the list once already, would you like to keep playing? (Y/y for yes, N/n for no)");
-		
-		userIn = keyboard.next().charAt(0);
-		if(userIn == 'Y' || userIn =='y')
-		{
-			this.resetWordsUsed();
-		}
-		else if(userIn == 'N' || userIn == 'n')
-		{
-			
-		}
-	}*/
+	//Name:			resetWordsUsed
+	//Description:	resets all of the used values for used in the list
+	//Parameters:	none
+	//Returns:		none
 	public void resetWordsUsed()
 	{
 		for(Word w: this.words)
@@ -124,6 +124,10 @@ public class WordList
 			w.resetUsed();
 		}
 	}
+	//Name:			toString
+	//Description:	returns a string representation of the word list
+	//Parameters:	none
+	//Returns:		String - string representation of the word list
 	public String toString()
 	{
 		String result = "";

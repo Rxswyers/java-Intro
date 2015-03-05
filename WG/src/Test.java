@@ -7,24 +7,47 @@
 * Filename: 		Test.java
 * Purpose:		  	Tests aspects of the game as soon as I make the objects.
 */
-import java.util.Scanner;
+
 public class Test
 {
 	public static void main(String []args)
 	{
-		Scanner keyboard = new Scanner(System.in);
+		/*Scanner keyboard = new Scanner(System.in);
 		WordList w = new WordList();
-		Word Puzzle;
+		Puzzle pz;
 		String guess;
-		w.loadWords();
-		//Puzzle = w.getWord();
-		Puzzle = new Word("poop");
-		System.out.println(Puzzle);
+		Player p = new Player("Ruben");
 		
-		Puzzle.genBlanks();
-		System.out.println(Puzzle);
+		w.loadWords();
+		pz = w.getWord().toPuzzle();
+		//pz = new Puzzle("poop");
+		System.out.println(pz);
+		
+		pz.genBlanks();
+		System.out.println(pz);
 		guess = keyboard.nextLine();
-		Puzzle.guessBlanks(guess);
-		keyboard.close();
+		
+		if(guess.length() != pz.numBlanks())
+		{
+			System.out.println("You have entered the wrong amount of characters to guess, please try again");
+			System.out.println(pz);
+			guess = keyboard.nextLine();
+		}
+		if(pz.guessBlanks(guess))
+		{
+			System.out.println("You guessed right!");
+			System.out.println("You recieved a score of " + pz.score());
+			p.addScore(pz.score());
+		}
+		else
+		{
+			System.out.println("You guessed wrong");
+			System.out.println("You lost " + pz.score() + " points");
+			p.subtractScore(pz.score());
+		}
+		System.out.println(p.getName() + "'s score is "+ p.getScore());
+		keyboard.close();*/
+		WordGame game = new WordGame();
+		game.preGame();
 	}
 }
