@@ -22,9 +22,9 @@ public class CoinCounterGUI {
 	JLabel nQuarters = new JLabel("0");
 	JLabel nHalfDollars = new JLabel("0");
 	JLabel nDollars = new JLabel("0");
-
+	int []counts =  new int[6];
 	CoinCounterMechanism cm;
-
+	double total;
 	private JFrame frame;
 
 	/**
@@ -48,21 +48,23 @@ public class CoinCounterGUI {
 	 */
 	public CoinCounterGUI() {
 		initialize();
-		//testWindowUpdate();
 //		testCoinProducerConsumer();
 	}
 
-	//void testWindowUpdate()
-	//{
-		//this.updateTotal();
-		//this.updatePennies();
-		//this.updateNickels();
-		//this.updateDimes();
-		//this.updateQuarters();
-		//this.updateHalfdollars();
-		//this.updateDollars();
-	//}
-
+	void windowUpdate(double t)
+	{
+		this.updateTotal(t);
+		this.updatePennies(counts[0]);
+		this.updateNickels(counts[1]);
+		this.updateDimes(counts[2]);
+		this.updateQuarters(counts[3]);
+		this.updateHalfdollars(counts[4]);
+		this.updateDollars(counts[5]);
+	}
+	void setTotal(double t)
+	{
+		this.total = t;
+	}
 /*
 	void testCoinProducerConsumer()
 	{
@@ -233,7 +235,9 @@ public class CoinCounterGUI {
 			public void actionPerformed(ActionEvent arg0) {
 				cm.resetConsumerFlag();
 				cm.resetProducerFlag();
-				
+				cm.getCounts(counts);
+				windowUpdate(cm.getTotal());
+				System.out.println(total);
 				cm = null;
 				System.gc();
 				
