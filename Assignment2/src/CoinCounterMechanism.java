@@ -4,7 +4,7 @@ public class CoinCounterMechanism
 {
 	int coins[] = {1, 5 ,10, 25, 50, 100}; 
 	RandomInteger rm = new RandomInteger(0,5);
-	
+	int coinCount[] = {0,0,0,0,0,0};
 	boolean consumerFlag = false;
 	boolean producerFlag = false;
 	

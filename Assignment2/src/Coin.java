@@ -1,16 +1,16 @@
 
 public class Coin
 {
-	protected int value;
+	protected double value;
 	
 	public Coin()
 	{
 	}
-	public int getValue()
+	public double getValue()
 	{
 		return this.value;
 	}
-	public int add(Coin C)
+	public double add(Coin C)
 	{
 		return C.getValue() + this.getValue();
 	}
