@@ -22,9 +22,10 @@ public class CoinCounterGUI {
 	JLabel nQuarters = new JLabel("0");
 	JLabel nHalfDollars = new JLabel("0");
 	JLabel nDollars = new JLabel("0");
+	//I added total and counts
+	double total;
 	int []counts =  new int[6];
 	CoinCounterMechanism cm;
-	double total;
 	private JFrame frame;
 
 	/**
@@ -235,6 +236,7 @@ public class CoinCounterGUI {
 			public void actionPerformed(ActionEvent arg0) {
 				cm.resetConsumerFlag();
 				cm.resetProducerFlag();
+				//calls my methods
 				cm.getCounts(counts);
 				windowUpdate(cm.getTotal());
 				cm = null;
