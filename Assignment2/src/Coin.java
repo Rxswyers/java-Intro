@@ -14,4 +14,8 @@ public class Coin
 	{
 		return C.getValue() + this.getValue();
 	}
+	public double add(double d)
+	{
+		return this.getValue() + d;
+	}
 }

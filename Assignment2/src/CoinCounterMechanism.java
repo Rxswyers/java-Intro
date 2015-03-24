@@ -27,7 +27,25 @@ public class CoinCounterMechanism
 	{
 		producerFlag = false;
 	}
-	
+	Coin chooseCoin(Integer I)
+	{
+		switch(I)
+		{ 
+			case 1:
+				return new Penny();
+			case 5:
+				return new Nickel();
+			case 10:
+				return new Dime();
+			case 25:
+				return new Quarter();
+			case 50:
+				return new HalfDollar();
+			case 100:
+				return new Dollar();
+			
+		}
+	}
 	
 	final SynchronousQueue<Integer> queue = new SynchronousQueue<Integer>();
 	
