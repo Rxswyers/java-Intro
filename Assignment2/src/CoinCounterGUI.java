@@ -48,20 +48,20 @@ public class CoinCounterGUI {
 	 */
 	public CoinCounterGUI() {
 		initialize();
-		testWindowUpdate();
+		//testWindowUpdate();
 //		testCoinProducerConsumer();
 	}
 
-	void testWindowUpdate()
-	{
-		this.updateTotal(77.23);
-		this.updatePennies(54);
-		this.updateNickels(45);
-		this.updateDimes(154);
-		this.updateQuarters(75);
-		this.updateHalfdollars(129);
-		this.updateDollars(6);
-	}
+	//void testWindowUpdate()
+	//{
+		//this.updateTotal();
+		//this.updatePennies();
+		//this.updateNickels();
+		//this.updateDimes();
+		//this.updateQuarters();
+		//this.updateHalfdollars();
+		//this.updateDollars();
+	//}
 
 /*
 	void testCoinProducerConsumer()
