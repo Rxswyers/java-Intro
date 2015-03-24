@@ -29,6 +29,11 @@ public class CoinCounterMechanism
 	{
 		producerFlag = false;
 	}
+	//added my own methods to help out
+	//Name:			getCounts
+	//Description:	changes the array of integers to the counts
+	//Parameters:	Array of ints - the counts of the coins
+	//Returns:		none
 	void getCounts(int[] cs)
 	{
 		for(int i = 0; i < 6; i ++)
@@ -36,10 +41,19 @@ public class CoinCounterMechanism
 			cs[i] = coinCount[i];
 		}
 	}
+	//Name:			getTotal
+	//Description:	returns the total
+	//Parameters:	N/A
+	//Returns:		the total
 	double getTotal()
 	{
 		return total;
 	}
+	//Name:			chooseCoin
+	//Description:	Returns the right coin based on the Integer that is taken in
+	//				also increments the appropriate coinCount index
+	//Parameters:	Integer I - should be 1,5,10,25,50, or 100
+	//Returns:		Coin - the right coin based on I
 	Coin chooseCoin(Integer I)
 	{
 		switch(I)

@@ -133,7 +133,7 @@ public class CoinCounterGUI {
 		panel_5.add(label_4);
 		
 		JLabel lblCoinCountingSimulation = new JLabel("Coin Counting Simulation");
-		lblCoinCountingSimulation.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblCoinCountingSimulation.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblCoinCountingSimulation.setBounds(104, 35, 271, 37);
 		frame.getContentPane().add(lblCoinCountingSimulation);
 		
@@ -176,11 +176,11 @@ public class CoinCounterGUI {
 		JLabel lblTotalDollars = new JLabel("Total Dollars");
 		lblTotalDollars.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTotalDollars.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblTotalDollars.setBounds(153, 84, 164, 37);
+		lblTotalDollars.setBounds(153, 84, 200, 37);
 		frame.getContentPane().add(lblTotalDollars);
 		
 
-		totalDollars.setFont(new Font("Tahoma", Font.PLAIN, 48));
+		totalDollars.setFont(new Font("Tahoma", Font.PLAIN, 36));
 		totalDollars.setHorizontalAlignment(SwingConstants.CENTER);
 		totalDollars.setBounds(153, 120, 189, 52);
 		frame.getContentPane().add(totalDollars);
@@ -237,7 +237,6 @@ public class CoinCounterGUI {
 				cm.resetProducerFlag();
 				cm.getCounts(counts);
 				windowUpdate(cm.getTotal());
-				System.out.println(total);
 				cm = null;
 				System.gc();
 				
