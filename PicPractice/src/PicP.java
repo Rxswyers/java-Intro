@@ -21,9 +21,6 @@ public class PicP extends JFrame
 		add(picturePanel);
 		this.setVisible(true);
 	}
-
-
-
 	private class PicturePanel extends JPanel
 	{
 		BufferedImage img;
