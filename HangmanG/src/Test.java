@@ -95,7 +95,8 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		}
 		else if(event.getActionCommand().equals("New Word"))
 		{
-			testing.setText(Wordlist.getWord().toString());
+			Word temp = Wordlist.getWord();
+			testing.setText(temp.toString()+" " + temp.getCategory());
 		}
 		else if(Bs.contains(event.getSource()))
 		{

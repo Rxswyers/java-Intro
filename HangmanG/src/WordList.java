@@ -36,7 +36,7 @@ public class WordList
 		File dir = new File(".");
 		//File.separator is platform independent, so it will use / or \ depending on
 		//the system it runs on. getCononicalPath is the abosulte path
-		File fin = new File(dir.getCanonicalPath() + File.separator + "words.txt");
+		File fin = new File(dir.getCanonicalPath() + File.separator + "newWords.txt");
 		FileInputStream fileinput = new FileInputStream(fin);
 		BufferedReader buff = new BufferedReader(new InputStreamReader(fileinput));
 		
@@ -44,9 +44,10 @@ public class WordList
 		
 		while((line = buff.readLine()) != null)
 		{
+			String [] parts = line.split(" ");
 			//adds the word to the file
 			//the file should have a word on each line
-			this.words.add(new Word(line));
+			this.words.add(new Word(parts[0],parts[1]));
 		}
 		//close out the file
 		buff.close();
@@ -81,7 +82,7 @@ public class WordList
 	{
 		for(String w:ws)
 		{
-			this.words.add(new Word(w));
+			this.words.add(new Word(w,"thing"));
 		}
 		
 	}
@@ -111,7 +112,7 @@ public class WordList
 				
 			}
 		}
-		return new Word("Return");
+		return new Word("Return","thing");
 	}
 	//Name:			resetWordsUsed
 	//Description:	resets all of the used values for used in the list

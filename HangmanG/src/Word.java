@@ -13,18 +13,28 @@ public class Word
 	//members
 	protected ArrayList<Letter> word;
 	protected boolean used;
+	protected String category;
 	//Name:			Word
 	//Description:	Constructor for a Word - turns a string into a Word
 	//Parameters:	String s - the string that the word is supposed to be
 	//Returns:		none
-	public Word(String s)
+	public Word(String s, String c)
 	{
 		this.word = new ArrayList<Letter>();
 		for(int i = 0; i < s.length(); i ++)
 		{
 			this.word.add(new Letter(s.charAt(i)));
 		}
+		this.category = c;
 		this.used = false;
+	}
+	//Name:			getCategory
+	//Description:	gets the category that the word is in
+	//Parameters	none
+	//Returns		The category as a string
+	public String getCategory()
+	{
+		return this.category;
 	}
 	//Name:			use
 	//Description:	sets the used member to true
@@ -64,7 +74,7 @@ public class Word
 	//Returns:		Puzzle - the converted word
 	public Puzzle toPuzzle()
 	{
-		Puzzle puzz = new Puzzle(this.toString());
+		Puzzle puzz = new Puzzle(this.toString(),getCategory());
 		return puzz;
 	}
 	//Name:			toString

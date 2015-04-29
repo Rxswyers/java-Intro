@@ -15,9 +15,9 @@ public class Puzzle extends Word
 	//Description:	Constructor for a Puzzle
 	//Parameters:	String - the string that the Puzzle will represent
 	//Returns:		none
-	public Puzzle (String s)
+	public Puzzle (String s,String c)
 	{
-		super(s);
+		super(s,c);
 	}
 	//Name:			guessBlanks
 	//Description:	checks to see if the user guessed the right blanks
