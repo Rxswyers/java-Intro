@@ -47,7 +47,7 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		Hang dude = new Hang();
 		dude.setLayout(null);
 		this.add(dude);
-		dude.setBounds(50,50,100,100);
+		dude.setBounds(600,50,150,200);
 		//sets up the letter buttons and adds them to an ArrayList
 		char letter = 'A';
 		int xOff = 55;
@@ -93,18 +93,6 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		{
 			B.setEnabled(false);
 		}
-		BufferedImageLoader loader = new BufferedImageLoader();
-		BufferedImage ss = null;
-		
-		try
-		{
-			ss = loader.loadImage("Alphabet.png");
-		}catch(IOException e)
-		{
-			System.out.println(e);
-		}
-		SpriteSheet sprite = new SpriteSheet(ss);
-		
 		NewWord.setEnabled(false);
 		ShowAnswer.setEnabled(false);
 		setVisible(true);
