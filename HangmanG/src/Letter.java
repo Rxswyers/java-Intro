@@ -86,6 +86,14 @@ public class Letter
 	{
 		this.blank = false;
 	}
+	//Name:			getChar
+	//Description:	gets the character that the Letter is using
+	//Parameters:	none
+	//Returns:		The char the Letter is using
+	public char getChar()
+	{
+		return this.letter;
+	}
 	//Name:			toString
 	//Description:	returns a string representation of the Letter
 	//Parameters:	none

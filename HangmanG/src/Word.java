@@ -77,6 +77,18 @@ public class Word
 		Puzzle puzz = new Puzzle(this.toString(),getCategory());
 		return puzz;
 	}
+	//Name:			charAt
+	//Description:	gets the character at a location
+	//Parameters	index
+	//Returns:		the character at the index
+	public char charAt(int index)
+	{
+		return word.get(index).getChar();
+	}
+	public int length()
+	{
+		return this.word.size();
+	}
 	//Name:			toString
 	//Description:	prints out a string representation of the word
 	//Parameters:	none
