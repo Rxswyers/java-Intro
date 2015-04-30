@@ -47,7 +47,7 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		Hang dude = new Hang();
 		dude.setLayout(null);
 		this.add(dude);
-		dude.setBounds(550,50,150,200);
+		dude.setBounds(550,60,150,200);
 		//sets up the letter buttons and adds them to an ArrayList
 		char letter = 'A';
 		int xOff = 55;

@@ -10,24 +10,27 @@ import java.util.ArrayList;
 
 public class Hang extends JPanel
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int part;
-	BufferedImage test;
+	BufferedImage ss;
 	public Hang()
 	{
-		/*BufferedImageLoader loader = new BufferedImageLoader();
-		BufferedImage ss = null;
+		BufferedImageLoader loader = new BufferedImageLoader();
+
 		
 		try
 		{
 			File dir = new File(".");
-			ss = loader.loadImage(dir.getCanonicalPath() + File.separator + "Alphabet.png");
+			ss = loader.loadImage(dir.getCanonicalPath() + File.separator + "dash.png");
 		}catch(IOException e)
 		{
 			System.out.println(e);
 		}
-		SpriteSheet sprite = new SpriteSheet(ss);
-		test = sprite.getSprite(0, 0, 100, 120);
-		*/
+		
+		
 	}
 	public void nextPart()
 	{
@@ -53,6 +56,6 @@ public class Hang extends JPanel
 		//Diagonal
 		//g.drawLine(80, 99, 99, 80);
 		g.drawLine(130, 199, 149, 180);
-		//g.drawImage(test,0,0,32,32,this);
+		g.drawImage(ss,0,0,64,64,this);
 	}
 }
