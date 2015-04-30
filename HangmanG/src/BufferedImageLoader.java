@@ -6,7 +6,7 @@ public class BufferedImageLoader
 {
   public BufferedImage loadImage(String fileName) throws IOException
   {
-    URL url = this.getClass().getResource(fileName);
+    URL url = new URL(fileName);
     BufferedImage img = ImageIO.read(url);
     return img;
   }

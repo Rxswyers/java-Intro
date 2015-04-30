@@ -3,6 +3,8 @@ import java.awt.*;
 import javax.swing.*;
 
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Test extends JFrame implements WindowListener, ActionListener
@@ -45,8 +47,7 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		Hang dude = new Hang();
 		dude.setLayout(null);
 		this.add(dude);
-		dude.setBounds(50,50,40,40);
-		
+		dude.setBounds(50,50,100,100);
 		//sets up the letter buttons and adds them to an ArrayList
 		char letter = 'A';
 		int xOff = 55;
@@ -92,6 +93,18 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		{
 			B.setEnabled(false);
 		}
+		BufferedImageLoader loader = new BufferedImageLoader();
+		BufferedImage ss = null;
+		
+		try
+		{
+			ss = loader.loadImage("Alphabet.png");
+		}catch(IOException e)
+		{
+			System.out.println(e);
+		}
+		SpriteSheet sprite = new SpriteSheet(ss);
+		
 		NewWord.setEnabled(false);
 		ShowAnswer.setEnabled(false);
 		setVisible(true);
