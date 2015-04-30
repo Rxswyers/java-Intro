@@ -26,7 +26,7 @@ public class Hang extends JPanel
 			System.out.println(e);
 		}
 		SpriteSheet sprite = new SpriteSheet(ss);
-		test = sprite.getSprite(0, 0, 64, 64);
+		test = sprite.getSprite(0, 0, 100, 120);
 	}
 	public void nextPart()
 	{
@@ -37,6 +37,6 @@ public class Hang extends JPanel
 		super.paintComponent(g);
 		g.drawRect(0, 0, 20, 20);
 		g.fillRect(0, 0, 20, 20);
-		g.drawImage(test,0,0,64,64,this);
+		g.drawImage(test,0,0,32,32,this);
 	}
 }
