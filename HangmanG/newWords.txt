@@ -277,7 +277,6 @@ brochure thing
 broker person
 bronze thing
 brother person
-brother-in-law person
 brow thing
 brown thing
 brush thing
@@ -752,13 +751,11 @@ example thing
 exchange thing
 exclamation thing
 exhaust thing
-ex-husband person
 existence thing
 expansion thing
 experience thing
 expert thing
 explanation thing
-ex-wife person
 eye thing
 eyebrow thing
 eyelash thing
@@ -777,7 +774,6 @@ farm place
 farmer person
 fat thing
 father person
-father-in-law person
 faucet thing
 fear thing
 feast thing
@@ -918,7 +914,6 @@ gondola place
 gong thing
 good-bye thing
 goose thing
-gore-tex thing
 gorilla thing
 gosling thing
 government thing
@@ -936,8 +931,6 @@ grass thing
 grasshopper thing
 gray thing
 grease thing
-great-grandfather person
-great-grandmother person
 greece thing
 greek thing
 green thing
@@ -962,8 +955,6 @@ hacksaw thing
 hail thing
 hair thing
 haircut thing
-half-brother person
-half-sister person
 halibut thing
 hall thing
 hallway thing
@@ -1311,7 +1302,6 @@ mimosa thing
 mind thing
 mine thing
 minibus thing
-mini-skirt thing
 minister person
 mint thing
 minute thing
@@ -1334,7 +1324,6 @@ morocco place
 mosque place
 mosquito thing
 mother person
-mother-in-law person
 motion thing
 motorboat thing
 motorcycle thing
@@ -1343,7 +1332,6 @@ mouse thing
 moustache thing
 mouth thing
 move thing
-multi-hop thing
 multimedia thing
 muscle thing
 museum thing
@@ -1380,9 +1368,7 @@ node thing
 noise thing
 noodle thing
 north thing
-north america place
-north korea place
-norwegian place
+norwegian person
 nose thing
 note thing
 notebook thing
@@ -1417,7 +1403,6 @@ onion thing
 open thing
 opera thing
 operation thing
-ophthalmologist person
 opinion thing
 option thing
 orange thing
@@ -1500,7 +1485,6 @@ pear thing
 pedestrian person
 pediatrician person
 peen thing
-peer-to-peer thing
 pelican thing
 pen thing
 penalty thing

@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 public class Test extends JFrame implements WindowListener, ActionListener
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//members
 	JButton B;
 	ArrayList<JButton> Bs = new ArrayList<JButton>();
@@ -15,6 +19,10 @@ public class Test extends JFrame implements WindowListener, ActionListener
 	private Puzzle pz;
 	private boolean over;
 	JLabel testing;
+	JButton Start;
+	JButton NewWord;
+	JButton ShowAnswer;
+	JButton Quit;
 	
 	public Test(String s)
 	{
@@ -30,7 +38,7 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		setResizable(false);
 		addWindowListener(this);
 		setLayout(null);
-		testing = new JLabel(pz.toString());
+		testing = new JLabel(pz.toString() + " " + pz.getCategory());
 		this.add(testing);
 		testing.setBounds(0,0,200,15);
 		
@@ -56,27 +64,38 @@ public class Test extends JFrame implements WindowListener, ActionListener
 			}
 		}
 		//sets up the start button
-		JButton Start = new JButton("Start");
+		Start = new JButton("Start");
 		Start.setBounds(20,480,170,40);
 		add(Start);
+		Start.addActionListener(this);
 		
 		//sets up the new word button
-		JButton NewWord = new JButton("New Word");
+		NewWord = new JButton("New Word");
 		NewWord.setBounds(200,480,170,40);
 		add(NewWord);
 		NewWord.addActionListener(this);
+		
 		//sets up the show answer button
-		JButton ShowAnswer = new JButton("Show Answer");
+		ShowAnswer = new JButton("Show Answer");
 		ShowAnswer.setBounds(380,480,170,40);
 		add(ShowAnswer);
 		
 		//sets up the quit button
-		JButton Quit = new JButton("Quit");
+		Quit = new JButton("Quit");
 		Quit.setBounds(560,480,170,40);
 		Quit.addActionListener(this);
 		add(Quit);
 		
+		
+		//disables all letter buttons
+		for(JButton B: Bs)
+		{
+			B.setEnabled(false);
+		}
+		NewWord.setEnabled(false);
+		ShowAnswer.setEnabled(false);
 		setVisible(true);
+		
 		
 	}
 	public void windowClosed(WindowEvent event) {}
@@ -97,6 +116,16 @@ public class Test extends JFrame implements WindowListener, ActionListener
 		{
 			Word temp = Wordlist.getWord();
 			testing.setText(temp.toString()+" " + temp.getCategory());
+		}
+		else if(event.getActionCommand().equals("Start"))
+		{
+			for(JButton B: Bs)
+			{
+				B.setEnabled(true);
+			}
+			NewWord.setEnabled(true);
+			ShowAnswer.setEnabled(true);
+			Start.setEnabled(false);
 		}
 		else if(Bs.contains(event.getSource()))
 		{
