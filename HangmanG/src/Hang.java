@@ -43,12 +43,16 @@ public class Hang extends JPanel
 		g.drawLine(149, 0, 149, 199);
 		//top line
 		//g.drawLine(99, 0, 50, 0);
+		g.drawLine(149, 0, 75, 0);
 		//line going vertical from the top
 		//g.drawLine(50, 0, 50, 20);
+		g.drawLine(75, 0, 75, 40);
 		//Bottom line
 		//g.drawLine(50, 99, 99, 99);
+		g.drawLine(75, 199, 149, 199);
 		//Diagonal
 		//g.drawLine(80, 99, 99, 80);
+		g.drawLine(130, 199, 149, 180);
 		//g.drawImage(test,0,0,32,32,this);
 	}
 }
