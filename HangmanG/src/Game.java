@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Test extends JFrame implements WindowListener, ActionListener
+public class Game extends JFrame implements WindowListener, ActionListener
 {
 	/**
 	 * Pleasing the Eclipse editor by making it have a serialVersionUID
@@ -37,7 +37,7 @@ public class Test extends JFrame implements WindowListener, ActionListener
 	int numWrong;
 	JLabel header;
 	JLabel instructions;
-	public Test(String s)
+	public Game(String s)
 	{
 		super(s);
 		//sets up the header
@@ -250,6 +250,6 @@ public class Test extends JFrame implements WindowListener, ActionListener
 	}
 	public static void main(String []args)
 	{
-		new Test("Title");
+		new Game("Title");
 	}
 }

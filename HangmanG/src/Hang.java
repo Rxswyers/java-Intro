@@ -1,17 +1,20 @@
+/*Author: 			Ruben Swyers
+* Creation Date: 	April 30, 2015 
+* Due Date: 		April 30, 2015
+* Course: 			CSC243
+* Professor Name: 	Dr. Kaplan
+* Assignment: 		#3
+* Filename: 		Hang.java
+* Purpose:		  	Handles the gallows of the game
+*/
 import java.awt.*;
-
 import javax.swing.*;
-
-import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 
 public class Hang extends JPanel
 {
 	/**
-	 * 
+	 * Pleasing the Eclipse editor by making it have a serialVersionUID
 	 */
 	private static final long serialVersionUID = 1L;
 	private int part;
@@ -19,32 +22,29 @@ public class Hang extends JPanel
 	BufferedImage letter;
 	BufferedImage letter2;
 	BufferedImage letter3;
+	//Constructor for Hang
 	public Hang()
 	{
-		BufferedImageLoader loader = new BufferedImageLoader();
-
+		//set the number of parts to guess
 		part = 7;
-		try
-		{
-			File dir = new File(".");
-			ss = loader.loadImage(dir.getCanonicalPath() + File.separator + "dash.png");
-			letter = loader.loadImage(dir.getCanonicalPath() + File.separator + "A.png");
-			letter2 = loader.loadImage(dir.getCanonicalPath() + File.separator + "B.png");
-			letter3 = loader.loadImage(dir.getCanonicalPath() + File.separator + "C.png");
-		}catch(IOException e)
-		{
-			System.out.println(e);
-		}
-		
 		
 	}
+	//Name:			nextPart
+	//Discription:	updates the gallows by adding another part on it
+	//Parameters:	n/a
+	//Returns:		n/a
 	public void nextPart()
 	{
 		part --;
 	}
+	//Name:			checkLoss
+	//Discription:	checks to see if the last body part is showing
+	//Parameters:	n/a
+	//Returns:		true - you lost
+	//				false - you didn't lose
 	public boolean checkLoss()
 	{
-		if(part == 0)
+		if(part == 1)
 		{
 			return true;
 		}
@@ -53,13 +53,20 @@ public class Hang extends JPanel
 			return false;
 		}
 	}
+	//Name:			reset
+	//Discription:	resets the gallows
+	//Parameters:	n/a
+	//Returns:		n/a
 	public void reset()
 	{
 		part = 7;
 	}
+	//Name:			paintComponent
+	//Discription:	handles the paint for the gallows
+	//Parameters:	Graphics
+	//Returns:		n/a
 	protected void paintComponent(Graphics g)
 	{
-		//150,200
 		super.paintComponent(g);
 		//the right side
 		g.drawLine(149, 0, 149, 199);

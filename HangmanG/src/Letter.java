@@ -1,9 +1,9 @@
 /*Author: 			Ruben Swyers
-* Creation Date: 	February 27, 2015 
-* Due Date: 		March 5, 2015
+* Creation Date: 	April 30, 2015 
+* Due Date: 		April 30, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
-* Assignment: 		#1
+* Assignment: 		#3
 * Filename: 		Letter.java
 * Purpose:		  	Class, Makes up the object that the project will essentially be based
 * off of. The Letter class is basically a character, but with a few members and methods to help
@@ -33,6 +33,10 @@ public class Letter
 	{
 		return this.guessed;
 	}
+	//Name:			setGuessed
+	//Discription:	guesses the letter without the need for a char
+	//Parameters:	n/a
+	//Returns:		n/a
 	public void setGuessed()
 	{
 		this.guessed = true;

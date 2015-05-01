@@ -1,9 +1,9 @@
 /*Author: 			Ruben Swyers
-* Creation Date: 	February 27, 2015 
-* Due Date: 		March 5, 2015
+* Creation Date: 	April 30, 2015 
+* Due Date: 		April 30, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
-* Assignment: 		#1
+* Assignment: 		#3
 * Filename: 		Puzzle.java
 * Purpose:		  	Class, this is a child of Word.
 * 					It is what the user will see and guess in the game
@@ -43,7 +43,6 @@ public class Puzzle extends Word
 				char c = (l.getChar());
 				
 				//the word has one of the letters that were guessed
-				System.out.println("Guess " + Character.toString(lowerGuess) + " letter " + Character.toString(c));
 				if(c == lowerGuess)
 				{
 					if(!l.isGuessed())
@@ -57,6 +56,11 @@ public class Puzzle extends Word
 		return found;
 
 	}
+	//Name:			guess
+	//Discription:	checks to see if the character is a part of the word
+	//Parameters:	The character to check
+	//Returns:		true - if it's there
+	//				false - if it's not
 	public boolean guess(char g)
 	{
 		for(Letter l:word)
@@ -102,6 +106,10 @@ public class Puzzle extends Word
 		}
 		return false;
 	}
+	//Name:			guessAll
+	//Discription:	makes all of the letters guessed, so they show on the letterpanel
+	//Parameters:	n/a
+	//Returns:		n/a
 	public void guessAll()
 	{
 		for(Letter l: word)
@@ -147,6 +155,30 @@ public class Puzzle extends Word
 		for(Letter l:this.word)
 		{
 			l.clearBlank();
+		}
+	}
+	//Name:			allGuessed
+	//Discription:	checks to see if all the letters were guessed
+	//Parameters:	n/a
+	//Returns:		true - if they were all guessed
+	//				false - if they weren't
+	public boolean allGuessed()
+	{
+		int g = 0;
+		for(Letter l: word)
+		{
+			if(l.isGuessed())
+			{
+				g++;
+			}
+		}
+		if(g == word.size())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	//Name:			indexOf

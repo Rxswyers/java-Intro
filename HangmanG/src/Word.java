@@ -1,9 +1,9 @@
 /*Author: 			Ruben Swyers
 * Creation Date: 	February 27, 2015 
-* Due Date: 		March 5, 2015 5PM
+* Due Date: 		April 30, 2015 5PM
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
-* Assignment: 		#1
+* Assignment: 		#3
 * Filename: 		Word.java
 * Purpose:		  	Class, This will be a collection of Letters, creating a word.
 */
@@ -85,11 +85,18 @@ public class Word
 	{
 		return word.get(index).getChar();
 	}
-	//here
+	//Name:			letterAt
+	//Discription:	gets the letter at an index
+	//Parameters:	index of the letter
+	//Returns:		the letter at the index
 	public Letter letterAt(int index)
 	{
 		return word.get(index);
 	}
+	//Name:			length
+	//Discription:	gets the length of the word
+	//Parameters:	n/a
+	//Returns:		the length of the word
 	public int length()
 	{
 		return this.word.size();

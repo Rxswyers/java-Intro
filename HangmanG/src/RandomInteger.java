@@ -1,9 +1,9 @@
 /*Author: 			Ruben Swyers (Orignal Author: Dr.Kaplan)
 * Creation Date: 	February 27, 2015 
-* Due Date: 		March 5, 2015
+* Due Date: 		April 30, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
-* Assignment: 		#1
+* Assignment: 		#3
 * Filename: 		RandomInteger.java
 * Purpose:		  	Class, gets a random number within a certain range
 */

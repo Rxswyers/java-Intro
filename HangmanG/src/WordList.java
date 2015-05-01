@@ -1,9 +1,9 @@
 /*Author: 			Ruben Swyers
-* Creation Date: 	February 27, 2015 
-* Due Date: 		March 5, 2015
+* Creation Date: 	April 30, 2015 
+* Due Date: 		April 30, 2015
 * Course: 			CSC243
 * Professor Name: 	Dr. Kaplan
-* Assignment: 		#1
+* Assignment: 		#3
 * Filename: 		WordList.java
 * Purpose:		  	Class, Hold words to be used for the game
 */
