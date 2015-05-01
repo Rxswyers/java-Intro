@@ -33,6 +33,10 @@ public class Letter
 	{
 		return this.guessed;
 	}
+	public void setGuessed()
+	{
+		this.guessed = true;
+	}
 	//Name:			guess
 	//Description:	called to guess a letter, will make the guessed value true so that I can
 	//				tell if it is guessed

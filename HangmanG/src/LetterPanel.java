@@ -16,6 +16,8 @@ public class LetterPanel extends JPanel
 	ArrayList<BufferedImage> Letters;
 	BufferedImage Dash;
 	BufferedImageLoader loader;
+	int xOff;
+	//int YOff;
 	
 	public LetterPanel()
 	{
@@ -28,17 +30,29 @@ public class LetterPanel extends JPanel
 		{
 			System.out.println(e);
 		}
+		xOff = 60;
+		
 	}
-	
+	public void resetLetters()
+	{
+		Letters.clear();
+	}
 	public void setWord(Word w)
 	{
-		
+		resetLetters();
 		BufferedImage temp = null;
 		for(int i = 0; i < w.length(); i++)
 		{
 			try
 			{
-				temp = loader.loadImage(Character.toString(w.charAt(i))+".png");
+				if(w.letterAt(i).isGuessed())
+				{
+					temp = loader.loadImage(Character.toString(w.charAt(i)).toUpperCase()+".png");
+				}
+				else
+				{
+					temp = loader.loadImage("blank.png");
+				}
 			}catch(IOException e)
 			{
 				System.out.println(e);
@@ -51,7 +65,8 @@ public class LetterPanel extends JPanel
 		super.paintComponent(g);
 		for(int i = 0; i < Letters.size(); i ++)
 		{
-			
+			g.drawImage(Letters.get(i),(0+(i*xOff)),0,64,64,this);
+			g.drawImage(Dash, (2+(i*xOff)), 15, 64, 64, this);
 		}
 	}
 }

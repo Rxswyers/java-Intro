@@ -85,6 +85,11 @@ public class Word
 	{
 		return word.get(index).getChar();
 	}
+	//here
+	public Letter letterAt(int index)
+	{
+		return word.get(index);
+	}
 	public int length()
 	{
 		return this.word.size();

@@ -27,30 +27,46 @@ public class Puzzle extends Word
 	//				false - if the user did not guess right
 	public boolean guessBlanks(String g)
 	{
-		int count = 0;
+		char guessChar = g.charAt(0);
+		char lowerGuess = Character.toLowerCase(guessChar);
+		boolean found = false;
+		Letter l = null;
 		//goes through the string (which will be the user's guess)
 		//and checks to see if the letter is blanked out
 		//if the user guesses all of the blanks it will print out
 		//that you guessed them all!
-		for(int i = 0; i < g.length(); i ++)
+		if(this.guess(lowerGuess))
 		{
-			char c = (g.charAt(i));
-			//the word has one of the letters that were guessed
-			if(this.hasBlank(c))
+			for(int i = 0; i < word.size(); i ++)
 			{
-				//gets the location of the letter
-				count ++;
+				l = word.get(i);
+				char c = (l.getChar());
+				
+				//the word has one of the letters that were guessed
+				System.out.println("Guess " + Character.toString(lowerGuess) + " letter " + Character.toString(c));
+				if(c == lowerGuess)
+				{
+					if(!l.isGuessed())
+					{
+						l.guess(lowerGuess);
+						found = true;
+					}
+				}
 			}
 		}
-		if(count == this.numBlanks())
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return found;
 
+	}
+	public boolean guess(char g)
+	{
+		for(Letter l:word)
+		{
+			if(l.getChar() == g)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	//Name:			hasBlank
 	//Description:	Looks to see if if the character is a blank
@@ -86,30 +102,24 @@ public class Puzzle extends Word
 		}
 		return false;
 	}
-	
+	public void guessAll()
+	{
+		for(Letter l: word)
+		{
+			l.setGuessed();
+		}
+	}
 	//Name:			genBlanks
 	//Description:	generates the blanks randomly
 	//Parameters:	none
 	//Returns:		none
 	public void genBlanks()
 	{
-		int count = 0;
-		int randomNum = 0;
-		RandomInteger rand = new RandomInteger(0,this.word.size()-1);
 		//I'm only making half of the word blanked out because for longer words
 		//it will be extremely difficult if only one letter were to be shown
-		while(count < (this.word.size()-1)/2)
+		for(int i = 0; i < word.size(); i ++)
 		{
-			randomNum = rand.nextRandomIntegerInRange();
-			if(this.word.get(randomNum).isBlank())
-			{
-				continue;
-			}
-			else
-			{
-				this.word.get(randomNum).makeBlank();
-				count ++;
-			}
+				this.word.get(i).makeBlank();
 		}
 	}
 	//Name:			numBlanks
